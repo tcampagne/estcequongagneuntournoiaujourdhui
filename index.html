@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Est-ce qu’on gagne un tournoi aujourd'hui ?</title>
+  <meta name="author" content="Thibault Campagne" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description" content="Le site qui vous indique si aujourd’hui est un bon jour pour gagner un tournoi." />
+  <meta name="keywords"
+    content="rocket league, lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche, toujours, tournoi" />
+
+  <!-- Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://estcequongagneuntournoiaujourdhui.netlify.app/" />
+  <meta property="og:title" content="Est-ce qu’on met en production aujourd’hui ?" />
+  <meta property="og:description"
+    content="Le site qui vous indique si aujourd’hui est un bon jour pour gagner un tournoi." />
+
+  <style>
+    body {
+      background: #fff;
+      color: #000;
+      font-family: 'Open Sans', 'Times', sans-serif;
+      font-weight: normal;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 500%;
+      font-weight: bold;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    .mb0 {
+      margin-bottom: 0;
+    }
+
+    .aligncenter {
+      text-align: center;
+    }
+
+    a {
+      color: #074d7f;
+      /*color: #fff;*/
+    }
+
+    .invisible {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    p {
+      font-size: 200%;
+    }
+
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+
+    #share a {
+      display: inline-block;
+      margin: .5em;
+    }
+
+    .opquast_logo {
+      -webkit-animation-duration: 3s;
+      animation-duration: 3s;
+      -webkit-animation-name: oooooomooooonooooooopquaaaaaaaaaaast;
+      animation-name: oooooomooooonooooooopquaaaaaaaaaaast;
+      max-width: 100vw;
+      display: inline-block;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    @-webkit-keyframes oooooomooooonooooooopquaaaaaaaaaaast {
+      0% {
+        -webkit-transform: scale(0) rotateY(0);
+        transform: scale(0) rotateY(0);
+      }
+
+      80% {
+        -webkit-transform: scale(5) rotateY(720deg);
+        transform: scale(5) rotateY(720deg);
+      }
+
+      90% {
+        -webkit-transform: scale(15) rotateY(720deg);
+        transform: scale(15) rotateY(720deg);
+      }
+
+      100% {
+        -webkit-transform: scale(1) rotateY(720deg);
+        transform: scale(1) rotateY(720deg);
+      }
+    }
+
+    @keyframes oooooomooooonooooooopquaaaaaaaaaaast {
+      0% {
+        -webkit-transform: scale(0) rotateY(0);
+        transform: scale(0) rotateY(0);
+      }
+
+      80% {
+        -webkit-transform: scale(5) rotateY(720deg);
+        transform: scale(5) rotateY(720deg);
+      }
+
+      90% {
+        -webkit-transform: scale(15) rotateY(720deg);
+        transform: scale(15) rotateY(720deg);
+      }
+
+      100% {
+        -webkit-transform: scale(1) rotateY(720deg);
+        transform: scale(1) rotateY(720deg);
+      }
+    }
+
+    @media (max-width: 42em) {
+      h1 {
+        text-align: center;
+        font-size: 300%;
+      }
+
+      p {
+        font-size: 150%;
+      }
+    }
+  </style>
+
+</head>
+
+<body role="document">
+  <h1 id="day"></h1>
+  <div class="aligncenter"> <img src="ez.webp" alt="" /><br /> <strong>C’est parti&#160;!</strong> (EZ)<br /></div>
+</body>
+
+<script>
+  var date = new Date();
+  var weekdays = new Array(7);
+  weekdays[0] = "Dimanche";
+  weekdays[1] = "Lundi";
+  weekdays[2] = "Mardi";
+  weekdays[3] = "Mercredi";
+  weekdays[4] = "Jeudi";
+  weekdays[5] = "Vendredi";
+  weekdays[6] = "Samedi";
+  var day = weekdays[date.getDay()];
+  document.getElementById("day").innerHTML = "Un "+day + " ?";
+</script>
+
+</html>
